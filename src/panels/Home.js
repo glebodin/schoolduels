@@ -7,10 +7,22 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
+import './Home.css';
+let rating = 0, place = 1;
+
+const Scoreboard = () => {
+    return (
+        <div>
+            <h1 align="center"><strong> {rating} </strong></h1>
+            <h3 align="center"> ({place} место в общем рейтинге)</h3>
+            <h2 align="center"> Ваш рейтинг </h2>
+        </div>
+    );
+};
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader>Example</PanelHeader>
+		<PanelHeader>Главная</PanelHeader>
 		{fetchedUser &&
 		<Group title="User Data Fetched with VK Bridge">
 			<Cell
@@ -23,6 +35,7 @@ const Home = ({ id, go, fetchedUser }) => (
 
 		<Group title="Navigation Example">
 			<Div>
+                <Scoreboard />
                 <Button size="xl" level="2" onClick={go} data-to="train">
 				    Порешать задачи для тренировки	
                 </Button>

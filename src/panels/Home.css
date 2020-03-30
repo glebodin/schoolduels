@@ -1,0 +1,10 @@
+body {
+    background: black; 
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 40;
+    color: black;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
